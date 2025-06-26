@@ -1,0 +1,12 @@
+// Backup of firebase.json
+// (JSON content copied from original)
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+} 

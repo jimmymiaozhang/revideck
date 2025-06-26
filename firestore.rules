@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(accountId) {
+      return isSignedIn() && 
+        exists(/databases/$(database)/documents/oauth_connections/**) &&
+        get(/databases/$(database)/documents/oauth_connections/{id}).data.accountId == accountId;
+    }
+
+    // Accounts collection
+    match /accounts/{accountId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isOwner(accountId);
+      allow delete: if false; // Don't allow account deletion through client
+    }
+
+    // OAuth connections collection
+    match /oauth_connections/{connectionId} {
+      allow read: if isSignedIn() && (
+        resource.data.email == request.auth.token.email ||
+        resource.data.providerUserId == request.auth.uid
+      );
+      allow create: if isSignedIn() && 
+        request.resource.data.email == request.auth.token.email;
+      allow update, delete: if false; // Don't allow updates or deletion
+    }
+
+    // Profiles collection
+    match /profiles/{accountId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isOwner(accountId);
+      allow delete: if false; // Don't allow profile deletion through client
+    }
+  }
+} 
