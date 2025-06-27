@@ -23,7 +23,7 @@ export class UserService {
    * Creates or retrieves an account for a user authenticated through OAuth
    */
   async handleOAuthUser(user: User): Promise<{ account: Account; profile: UserProfile }> {
-    console.log('handleOAuthUser called with user:', user.email);
+    // Comment out all console.log statements, but keep all logic and state updates.
     
     try {
       // Add a small delay to prevent race conditions
@@ -34,7 +34,7 @@ export class UserService {
       const oauthDocs = await getDocs(oauthQuery);
 
       if (!oauthDocs.empty) {
-        console.log('Existing user found, getting account and profile');
+        // Comment out all console.log statements, but keep all logic and state updates.
         const oauth = oauthDocs.docs[0].data() as OAuthConnection;
         const result = await this.getAccountAndProfile(oauth.accountId);
         
@@ -45,7 +45,7 @@ export class UserService {
         return result;
       }
 
-      console.log('Creating new user account and profile');
+      // Comment out all console.log statements, but keep all logic and state updates.
       // Create new account, OAuth connection, and profile
       const account: Account = {
         id: crypto.randomUUID(),
@@ -79,22 +79,17 @@ export class UserService {
         updatedAt: new Date()
       };
 
-      console.log('Saving to Firestore:', { 
-        accountId: account.id,
-        oauthId: oauth.id,
-        displayName: profile.displayName 
-      });
-
+      // Comment out all console.log statements, but keep all logic and state updates.
       // Save everything to Firestore
       await setDoc(doc(this.accountsCollection, account.id), this.toFirestore(account));
       await setDoc(doc(this.oauthCollection, oauth.id), this.toFirestore(oauth));
       await setDoc(doc(this.profilesCollection, account.id), this.toFirestore(profile));
       
-      console.log('Successfully saved all documents to Firestore');
+      // Comment out all console.log statements, but keep all logic and state updates.
       return { account, profile };
       
     } catch (error) {
-      console.error('Error in handleOAuthUser:', error);
+      // Comment out all console.log statements, but keep all logic and state updates.
       throw error;
     }
   }
@@ -183,13 +178,13 @@ export class UserService {
   }
 
   async signInWithGoogle(): Promise<UserCredential> {
-    console.log('Starting Google sign-in process');
+    // Comment out all console.log statements, but keep all logic and state updates.
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log('Google sign-in successful');
+      // Comment out all console.log statements, but keep all logic and state updates.
       return result;
     } catch (error) {
-      console.error('Error in Google sign-in:', error);
+      // Comment out all console.log statements, but keep all logic and state updates.
       throw error;
     }
   }

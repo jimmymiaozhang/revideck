@@ -30,14 +30,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     return auth.onAuthStateChanged(async (user) => {
-      console.log('Auth state changed:', user?.email);
       setCurrentUser(user);
       
       if (user && !authInProgress.current) {
         try {
           authInProgress.current = true;
           const { profile } = await userService.handleOAuthUser(user);
-          console.log('Profile set after auth state change:', profile.displayName);
           setProfile(profile);
         } finally {
           authInProgress.current = false;
@@ -50,11 +48,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signInWithGoogle = async () => {
-    console.log('Initiating Google sign-in...');
     try {
       authInProgress.current = true;
-      const result = await userService.signInWithGoogle();
-      console.log('Google sign-in completed');
+      await userService.signInWithGoogle();
     } finally {
       authInProgress.current = false;
     }
