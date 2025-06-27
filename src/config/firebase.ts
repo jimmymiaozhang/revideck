@@ -47,12 +47,13 @@ export interface UserProfile {
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCpfRWAQAMX-A5lPu_DDY4SvnD_JGm4jbM",
-  authDomain: "nerdyarchi.firebaseapp.com",
-  projectId: "nerdyarchi",
-  storageBucket: "nerdyarchi.firebasestorage.app",
-  messagingSenderId: "19959924313",
-  appId: "1:19959924313:web:abda5511ec210d0a153088"
+  apiKey: "AIzaSyAzquApS_KCGerb2CPSlLIBITLZIO-VriM",
+  authDomain: "revideck-8f5bd.firebaseapp.com",
+  projectId: "revideck-8f5bd",
+  storageBucket: "revideck-8f5bd.appspot.com",
+  messagingSenderId: "475939436240",
+  appId: "1:475939436240:web:c75b365e00219c995290d5",
+  measurementId: "G-PZSJFKJ2GJ"
 };
 
 // Debug: Log full config
