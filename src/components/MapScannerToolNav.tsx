@@ -128,7 +128,7 @@ const MapScannerToolNav = () => {
                 onClick={handleHomeClick}
                 sx={{ fontWeight: 900, color: 'black', fontFamily: '"Roboto Flex"', fontSize: '1.25rem', px: 3, mb: 0.5, letterSpacing: 0.5 }}
               >
-                Nerdy.Archi
+                ReviDeck
               </MenuItem>
               <Divider />
               {!currentUser ? (

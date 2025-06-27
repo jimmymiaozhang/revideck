@@ -117,7 +117,7 @@ const Navigation = () => {
                 }
               }}
             >
-              Nerdy.Archi
+              ReviDeck
             </Button>
             
             <Box sx={{ 
@@ -277,7 +277,7 @@ const Navigation = () => {
                   }}
                   sx={{ fontWeight: 900, color: 'black', fontFamily: '"Roboto Flex"', fontSize: '1.25rem', px: 3, mb: 0.5, letterSpacing: 0.5 }}
                 >
-                  Nerdy.Archi
+                  ReviDeck
                 </MenuItem>
                 <Divider />
                 {!currentUser ? (
@@ -288,7 +288,7 @@ const Navigation = () => {
                       handleMenuClose();
                       navigate('/about');
                     }}>
-                      About Nerdy.Archi
+                      About ReviDeck
                     </MenuItem>
                   </>
                 ) : (
@@ -307,7 +307,7 @@ const Navigation = () => {
                           handleMenuClose();
                           navigate('/about');
                         }}>
-                          About Nerdy.Archi
+                          About ReviDeck
                         </MenuItem>
                       </>
                     )}

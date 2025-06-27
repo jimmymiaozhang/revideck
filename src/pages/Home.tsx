@@ -74,7 +74,7 @@ const Home = () => {
               width: '100%'
             }}
           >
-            Subheading that sets up context, shares more info about the website, or generally gets people psyched to keep scrolling.
+            Analyze urban accessibility, transportation networks, and spatial relationships. Perfect for architects and urban planners working with location-based data and site analysis.
           </Typography>
         </Box>
 
@@ -128,7 +128,7 @@ const Home = () => {
               width: '100%'
             }}
           >
-            Subheading that sets up context, shares more info about the website, or generally gets people psyched to keep scrolling.
+            Discover nearby amenities, services, and points of interest with intelligent location-based analysis. Essential for real estate professionals and urban planners.
           </Typography>
         </Box>
 
@@ -182,7 +182,7 @@ const Home = () => {
               width: '100%'
             }}
           >
-            Subheading that sets up context, shares more info about the website, or generally gets people psyched to keep scrolling.
+            Create and customize building facades with intelligent design patterns. Streamline architectural workflows and explore design variations efficiently.
           </Typography>
         </Box>
       </Container>

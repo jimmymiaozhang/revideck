@@ -34,7 +34,7 @@ const Footer = () => {
             color: 'rgba(0, 0, 0, 0.6)'
           }}
         >
-          © {new Date().getFullYear()} Nerdy.Archi. All rights reserved.
+          © {new Date().getFullYear()} ReviDeck. All rights reserved.
         </Typography>
         
         <Typography
@@ -46,7 +46,7 @@ const Footer = () => {
             textAlign: { xs: 'center', sm: 'right' }
           }}
         >
-          Designed & Developed by Nerdy.Archi Team
+          Designed & Developed by ReviDeck Team
         </Typography>
       </Container>
     </Box>

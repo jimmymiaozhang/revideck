@@ -29,33 +29,7 @@ const About = () => {
             mb: { xs: 6, sm: 8 }
           }}
         >
-          About Nerdy.Archi
-        </Typography>
-
-        <Typography 
-          variant="body1" 
-          sx={{ 
-            color: 'black',
-            fontSize: { xs: '1rem', sm: '1.2rem' },
-            fontFamily: '"Roboto Flex"',
-            fontWeight: 100,
-            mb: 3
-          }}
-        >
-          We work with data scientists, designers, developers, engineers, and urbanists.
-        </Typography>
-
-        <Typography 
-          variant="body1" 
-          sx={{ 
-            color: 'black',
-            fontSize: { xs: '1rem', sm: '1.2rem' },
-            fontFamily: '"Roboto Flex"',
-            fontWeight: 100,
-            mb: 3
-          }}
-        >
-          We help explore ideas and support them with real-world data.
+          About ReviDeck
         </Typography>
 
         <Typography 
@@ -67,7 +41,7 @@ const About = () => {
             fontWeight: 100
           }}
         >
-          We aim to make your work clearer, faster, and more grounded.
+          ReviDeck provides data-driven tools for anyone seeking to analyze, understand, and anticipate the development of our living environments. It also transforms their findings into impactful presentation decks.
         </Typography>
       </Container>
     </Box>
