@@ -3,7 +3,7 @@ import mapboxgl, { Map as MapboxMapType, Marker as MapboxMarkerType, LngLatLike 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import chroma from 'chroma-js';
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoiem1ldmVyIiwiYSI6ImNtYXB1cGllcjAybG8ya29hZ2RxemZ0MHgifQ.MkXn_V9rtSCDSP1MqTgpqg';
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
 // Simplified PointType to match the new flat structure
 type IsochroneProfile = 'walking' | 'cycling' | 'driving';
