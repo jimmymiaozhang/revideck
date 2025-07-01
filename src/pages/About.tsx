@@ -2,17 +2,20 @@ import React from 'react';
 import { Typography, Box, Container } from '@mui/material';
 
 const About = () => (
-  <div style={{ maxWidth: 700, margin: '40px auto' }}>
+  <div style={{ maxWidth: 700, margin: '80px auto', paddingTop: '60px' }}>
     <div style={{ fontFamily: 'Roboto Flex', fontWeight: 100, fontSize: '1rem', color: 'rgba(0, 0, 0, 0.7)' }}>
-      <b style={{ fontWeight: 100 }}>ReviDeck aims to:</b>
-      <ol style={{ marginTop: 16, marginBottom: 16, paddingLeft: 24 }}>
-        <li style={{ marginBottom: 12 }}>
-          Equip users with data-driven tools to analyze, understand, and envision the development of our living environments
-        </li>
-        <li>
-          Translate their insights and proposals into impactful presentation decks
-        </li>
-      </ol>
+      <Typography 
+        sx={{ 
+          fontFamily: '"Roboto Flex"',
+          fontWeight: 100,
+          fontSize: '1rem',
+          color: 'rgba(0, 0, 0, 0.7)',
+          lineHeight: 1.6,
+          textAlign: 'center'
+        }}
+      >
+        ReviDeck equips users with data-driven, AI-powered tools to analyze, understand, and envision the development of our living environments, and transform their insights into impactful presentation decks.
+      </Typography>
     </div>
   </div>
 );
